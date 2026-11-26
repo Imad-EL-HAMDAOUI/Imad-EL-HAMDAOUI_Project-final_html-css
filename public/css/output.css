@@ -8,6 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-800: oklch(44.4% 0.177 26.899);
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-300: oklch(87.9% 0.169 91.605);
@@ -15,6 +16,7 @@
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-black: #000;
@@ -40,6 +42,7 @@
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --radius-xs: 0.125rem;
+    --radius-2xl: 1rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
@@ -1075,6 +1078,9 @@
       }
     }
   }
+  .inset-e-3 {
+    inset-inline-end: calc(var(--spacing) * 3);
+  }
   @layer daisyui.l1.l2.l3 {
     .textarea {
       min-height: calc(0.25rem * 20);
@@ -1547,8 +1553,14 @@
   .justify-start {
     justify-content: flex-start;
   }
+  .gap-1 {
+    gap: var(--spacing);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-\[0\.5\] {
     gap: 0.5;
@@ -1570,6 +1582,9 @@
   }
   .gap-\[12rem\] {
     gap: 12rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-\[1\.5rem\] {
     border-radius: 1.5rem;
@@ -1636,6 +1651,9 @@
   .bg-\[\#c3bad5\] {
     background-color: #c3bad5;
   }
+  .bg-\[\#ddd5ed\] {
+    background-color: #ddd5ed;
+  }
   .bg-\[\#ded5f0\] {
     background-color: #ded5f0;
   }
@@ -1684,6 +1702,9 @@
   .bg-base-100 {
     background-color: var(--color-base-100);
   }
+  .bg-blue-300 {
+    background-color: var(--color-blue-300);
+  }
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
@@ -1702,8 +1723,14 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
   .p-\[1rem\] {
     padding: 1rem;
+  }
+  .pt-1 {
+    padding-top: var(--spacing);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -1726,6 +1753,9 @@
   .pr-\[8rem\] {
     padding-right: 8rem;
   }
+  .pl-1 {
+    padding-left: var(--spacing);
+  }
   .pl-\[0\.5rem\] {
     padding-left: 0.5rem;
   }
@@ -1743,9 +1773,17 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -1770,11 +1808,26 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
+  .text-\[\#\#412c45\] {
+    color: ##412c45;
+  }
   .text-\[\#5d4263\] {
     color: #5d4263;
   }
+  .text-\[\#412c45\] {
+    color: #412c45;
+  }
   .text-\[\#492d52\] {
     color: #492d52;
+  }
+  .text-\[\#604964\] {
+    color: #604964;
+  }
+  .text-\[\#\] {
+    color: #;
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
@@ -1847,6 +1900,9 @@
     }
     .md\:h-\[25vh\] {
       height: 25vh;
+    }
+    .md\:h-\[30vh\] {
+      height: 30vh;
     }
     .md\:h-\[40vh\] {
       height: 40vh;
