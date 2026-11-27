@@ -1,0 +1,57 @@
+.file-css{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+.css{
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    justify-content: space-around;
+}
+.box{
+    width: 37vw;
+    height: 30vh;
+    background-color: #ece8f6;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image{
+    width: 4rem;
+    height: 4rem;
+}
+.text{
+    font-weight: bold;
+    font-size: xx-large;
+    color: #5d4263;
+}
+.mini{
+    font-size: large;
+}
+@media screen and (max-width: 480px) {
+    .parent {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .css{
+        gap: 1rem;
+    }
+    .box{
+        width: 100%;
+    }
+    .push{
+        padding-top: 15rem;
+    }
+}
